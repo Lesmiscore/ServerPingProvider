@@ -1,7 +1,8 @@
 package com.nao20010128nao.Wisecraft.provider;
-import com.nao20010128nao.Wisecraft.ServerListActivity;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.nao20010128nao.Wisecraft.Server;
 
 public class ExperimentalServerPingProvider implements ServerPingProvider {
 	List<NormalServerPingProvider> objects=new ArrayList<>();
@@ -11,7 +12,7 @@ public class ExperimentalServerPingProvider implements ServerPingProvider {
 		}
 	}
 	@Override
-	public void putInQueue(ServerListActivity.Server server, ServerPingProvider.PingHandler handler) {
+	public void putInQueue(Server server, ServerPingProvider.PingHandler handler) {
 		// TODO: Implement this method
 		int delta=Integer.MAX_VALUE;
 		ServerPingProvider obj=null;
